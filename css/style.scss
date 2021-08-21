@@ -1,0 +1,128 @@
+
+@mixin bgcolor($color) {
+    background: $color
+}
+
+body, html {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+
+}
+
+.wrapper {
+    min-height: 100%;
+    max-width:1132px;
+    margin:auto auto;
+
+    .colors {
+        float:left;
+        width:281.6px /1132px * 100%;
+        font-size: 19px;
+        font-weight: bold;
+
+        .block {
+            display:flex;
+            margin-top:10px;
+
+            .block__color {
+                width:70px / 281px * 100%;
+                height:70px;
+                margin-right: (70px + 171px) / 281px * 10%;
+                border-radius: 6px;
+                @include bgcolor(#1F2041);
+
+                &.second {
+                    @include bgcolor(rgba(31, 32, 65, 0.75));
+                }
+
+                &.third {
+                    @include bgcolor(rgba(31, 32, 65, 0.5));
+                }
+
+                &.fourth {
+                    @include bgcolor(rgba(31, 32, 65, 0.25));
+                }
+
+                &.fivth {
+                    @include bgcolor(rgba(31, 32, 65, 0.05));
+                }
+
+                &.sixth {
+                    @include bgcolor(#BC9CFF);
+                }
+
+                &.seventh {
+                    @include bgcolor(#6FCF97);
+                }
+
+            }
+
+            .block_description {
+                text-align: left;
+                width:171px / 281px * 100%;
+                span {
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    .headings {
+        width: 436px / 1132px * 100%;
+        float:right;
+
+        .headings__container {
+            margin-top:20px;
+            display:flex;
+            font-size: 24px;
+            color: rgba(31, 32, 65, 0.25);;
+
+            span:first-child {
+                width:20%;
+                text-align: right;
+
+            }
+
+            span:nth-child(2) {
+                margin:auto 0px auto 10px;
+                font-weight: bold;
+                line-height: 29px;
+                color: #1F2041;
+                text-align: left;
+                width:100%;
+            }
+
+            &.second {
+                font-size: 19px;   
+                line-height: 23px; 
+                span:first-child {
+                    padding-top:3px;
+                }
+            }
+
+            &.third {
+                font-size: 12px;
+                text-transform: uppercase;
+                span:first-child {
+                    padding-top:7px;
+                    height:100%;
+                }
+                span:nth-child(2) {
+                    padding-bottom:auto;
+                }
+            }
+
+            &.body {
+                font-size: 14px;
+                color: rgba(31, 32, 65, 0.25);
+                line-height: 24px;
+                span {
+                    margin-right:auto;
+                    font-weight: normal;
+                    font-size: 14px;
+                    color: rgba(31, 32, 65, 0.25);  
+                }
+            }
+        }
+    }
+}
